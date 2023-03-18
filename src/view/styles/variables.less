@@ -1,4 +1,4 @@
-:root {
+:root[data-theme="theme-dark"] {
   // Base colors
   --gray50: #080808;
   --gray75: #1a1a1a;
@@ -32,6 +32,64 @@
   --text500: var(--gray500);
 
   --background-color: #202020;
+
+  // Fonts
+  --font-family: 'Roboto', sans-serif;
+  --font-size-xsmall: 10px;
+  --font-size-small: 11px;
+  --font-size-normal: 12px;
+  --font-size-large: 16px;
+  --font-size-xlarge: 20px;
+
+  --input-text-color: var(--text200);
+  --input-border-color: var(--gray400);
+  --input-bg-color: var(--gray75);
+  --input-border-radius: 2px;
+
+  --z-index-hidden: -1;
+  --z-index-above: 1;
+  --z-index-overlay: 2;
+  --z-index-canvas: 3;
+  --z-index-render-panel: 4;
+  --z-index-modal-overlay: 5;
+  --z-index-modal-window: 6;
+  --z-index-menu: 7;
+}
+
+:root[data-theme="theme-light"] {
+  // Base colors
+  --gray50: #f4f4f4;
+  --gray75: #eaeaea;
+  --gray100: #e1e1e1;
+  --gray200: #d0d0d0;
+  --gray300: #c2c2c2;
+  --gray400: #b1b1b1;
+  --gray500: #9e9e9e;
+  --gray600: #7e7e7e;
+  --gray700: #585858;
+  --gray800: #323232;
+  --gray900: #0c0c0c;
+
+  --red400: #d7373f;
+  --blue400: #1473e6;
+  --green400: #268e6c;
+  --orange400: #da7b11;
+  --yellow400: #dfbf00;
+  --purple400: #9256d9;
+
+  --primary100: #a081fc;
+  --primary200: lighten(#a081fc, 4%);
+  --primary300: lighten(#a081fc, 8%);
+  --primary400: lighten(#a081fc, 12%);
+  --primary500: lighten(#a081fc, 16%);
+
+  --text100: var(--gray900);
+  --text200: var(--gray800);
+  --text300: var(--gray700);
+  --text400: var(--gray600);
+  --text500: var(--gray500);
+
+  --background-color: #f4f4f4;
 
   // Fonts
   --font-family: 'Roboto', sans-serif;

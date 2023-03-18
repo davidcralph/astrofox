@@ -1,5 +1,6 @@
 {
   "checkForUpdates": true,
   "autoUpdate": true,
-  "autoPlayAudio": true
+  "autoPlayAudio": true,
+  "theme": "Dark"
 }

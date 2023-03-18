@@ -218,6 +218,8 @@ export async function initApp() {
 
   const config = configStore.getState();
 
+  document.querySelector('html').dataset.theme = `theme-${config.theme ? config.theme.toLowerCase() : 'light'}`;
+
   api.on('download-progress', info => {
     updateDownloadProgress(info);
   });

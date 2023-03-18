@@ -8,10 +8,14 @@ import useConfig, { saveConfig } from 'actions/config';
 export default function AppSettings({ onClose }) {
   const appConfig = useConfig(state => state);
   const [state, setState] = useState(appConfig);
-  const { checkForUpdates, autoUpdate, autoPlayAudio } = state;
+  const { checkForUpdates, autoUpdate, autoPlayAudio, theme } = state;
 
   function handleChange(props) {
     setState(state => ({ ...state, ...props }));
+    // refresh theme
+    if (props.theme) {
+      document.querySelector('html').dataset.theme = `theme-${props.theme.toLowerCase()}`;
+    }
   }
 
   async function handleSave() {
@@ -34,6 +38,7 @@ export default function AppSettings({ onClose }) {
           name="autoUpdate"
           value={autoUpdate}
         />
+        <Setting label="Theme" name="theme" type="select" items={['Dark', 'Light']} value={theme} onChange={handleChange} />
       </Settings>
       <Settings label="Audio" columns={['60%', '40%']} onChange={handleChange}>
         <Setting
