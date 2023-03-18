@@ -21,7 +21,7 @@ specifiers:
   debug: ^4.3.4
   dotenv: ^16.0.3
   dotenv-cli: ^7.1.0
-  electron: 18.3.7
+  electron: 19.1.9
   electron-builder: ^23.6.0
   electron-notarize: ^1.2.2
   electron-updater: ^5.3.0
@@ -122,7 +122,7 @@ devDependencies:
   css-minimizer-webpack-plugin: 4.2.2_webpack@5.76.2
   dotenv: 16.0.3
   dotenv-cli: 7.1.0
-  electron: 18.3.7
+  electron: 19.1.9
   electron-builder: 23.6.0
   electron-notarize: 1.2.2
   electron-updater: 5.3.0
@@ -4427,8 +4427,8 @@ packages:
       - supports-color
     dev: true
 
-  /electron/18.3.7:
-    resolution: {integrity: sha512-SDvX0VYejR1xw9PrJyvnyiDcuIhdzFVaA1NaRN2LEWXr5R6mEFl8NVTM+i5dtxMm2SHP/FPnkvmsWZs6MHijqg==}
+  /electron/19.1.9:
+    resolution: {integrity: sha512-XT5LkTzIHB+ZtD3dTmNnKjVBWrDWReCKt9G1uAFLz6uJMEVcIUiYO+fph5pLXETiBw/QZBx8egduMEfIccLx+g==}
     engines: {node: '>= 8.6'}
     hasBin: true
     requiresBuild: true
