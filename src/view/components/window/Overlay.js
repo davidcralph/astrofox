@@ -3,7 +3,7 @@ import { animated, useTransition } from 'react-spring';
 import { easeInQuad } from 'utils/easing';
 import styles from './Overlay.less';
 
-export default function Overlay({ show, duration = 300, opacity = 0.5, easing = easeInQuad }) {
+export default function Overlay({ show, duration = 300, opacity = 0.5, easing = easeInQuad, onClose }) {
   const transitions = useTransition(show, {
     from: { opacity: 0 },
     enter: { opacity },
@@ -12,6 +12,6 @@ export default function Overlay({ show, duration = 300, opacity = 0.5, easing = 
   });
 
   return transitions(
-    (style, item) => item && <animated.div className={styles.overlay} style={style} />,
+    (style, item) => item && <animated.div className={styles.overlay} style={style} onClick={onClose} />,
   );
 }

@@ -27,7 +27,7 @@ export default function Modals() {
     const Component = modalComponents[component];
     return (
       <div className={styles.container} key={component}>
-        <Overlay show={!!modals.length} />
+        <Overlay show={!!modals.length} onClose={handleClose} />
         <animated.div className={styles.modal} style={style}>
           <ModalWindow {...modalProps} onClose={handleClose}>
             {Component && <Component {...componentProps} onClose={handleClose} />}
