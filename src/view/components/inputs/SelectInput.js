@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import styles from './SelectInput.less';
 
 export default function SelectInput({
@@ -53,10 +53,10 @@ export default function SelectInput({
   }
 
   return (
-    <div className={classNames(styles.select, className)}>
+    <div className={clsx(styles.select, className)}>
       <input
         type="text"
-        className={classNames(styles.input, { [styles.active]: showItems })}
+        className={clsx(styles.input, { [styles.active]: showItems })}
         name={name}
         style={{ width }}
         value={getDisplayText()}
@@ -65,7 +65,7 @@ export default function SelectInput({
         readOnly
       />
       <div
-        className={classNames(styles.options, optionsClassName, {
+        className={clsx(styles.options, optionsClassName, {
           [styles.hidden]: !showItems,
         })}
         style={{ width: optionsWidth }}
@@ -73,7 +73,7 @@ export default function SelectInput({
         {parsedItems.map((item, index) => (
           <div
             key={index}
-            className={classNames(styles.option, {
+            className={clsx(styles.option, {
               [styles.separator]: !item,
             })}
             style={item?.style}

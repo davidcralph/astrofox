@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import Icon from 'components/interface/Icon';
 import { raiseError } from 'actions/error';
 import { ignoreEvents } from 'utils/react';
@@ -60,7 +60,7 @@ export default function ImageInput({ name, value, onChange }) {
       >
         <img
           ref={image}
-          className={classNames(styles.img, {
+          className={clsx(styles.img, {
             [styles.hidden]: !hasImage,
           })}
           src={value}
@@ -71,7 +71,7 @@ export default function ImageInput({ name, value, onChange }) {
       </div>
       {hasImage && (
         <Icon
-          className={classNames({
+          className={clsx({
             [styles.closeIcon]: true,
           })}
           glyph={Times}

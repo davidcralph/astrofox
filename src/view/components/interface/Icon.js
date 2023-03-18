@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import styles from './Icon.less';
 
 const Icon = ({
@@ -11,7 +11,7 @@ const Icon = ({
   shapeRendering,
   onClick,
 }) => (
-  <span className={classNames(styles.icon, className)} title={title}>
+  <span className={clsx(styles.icon, className)} title={title}>
     <svg
       viewBox={viewBox}
       width={width}

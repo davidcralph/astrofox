@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import inputComponents from './inputComponents';
 import styles from './Setting.less';
 
@@ -19,7 +19,7 @@ export default function Setting({
   const [InputCompnent, inputProps] = inputComponents[type] ?? [];
 
   return (
-    <div className={classNames(styles.setting, className, { [styles.hidden]: hidden })}>
+    <div className={clsx(styles.setting, className, { [styles.hidden]: hidden })}>
       <div className={styles.label} style={{ width: labelWidth }}>
         {label}
       </div>

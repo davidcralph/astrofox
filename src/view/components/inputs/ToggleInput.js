@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import styles from './ToggleInput.less';
 
 export default function ToggleInput({
@@ -12,14 +12,14 @@ export default function ToggleInput({
   return (
     <div className={styles.toggle}>
       <div
-        className={classNames(styles.input, {
+        className={clsx(styles.input, {
           [styles.on]: value,
         })}
         onClick={() => onChange(name, !value)}
       />
       {label && (
         <div
-          className={classNames(styles.label, {
+          className={clsx(styles.label, {
             [styles.left]: labelPosition === 'left',
             [styles.right]: labelPosition === 'right',
           })}

@@ -1,10 +1,10 @@
 import React from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import styles from './MenuItem.less';
 
 const MenuItem = ({ label, checked, disabled, onClick }) => (
   <div
-    className={classNames(styles.item, {
+    className={clsx(styles.item, {
       [styles.checked]: checked,
       [styles.disabled]: disabled,
     })}

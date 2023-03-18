@@ -1,11 +1,11 @@
 import React from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import MenuItem from './MenuItem';
 import styles from './Menu.less';
 
 const Menu = ({ items, visible, onMenuItemClick }) => (
   <div
-    className={classNames(styles.menu, {
+    className={clsx(styles.menu, {
       [styles.hidden]: visible === false,
     })}
   >

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import styles from './TextInput.less';
 
 export default function TextInput({
@@ -61,7 +61,7 @@ export default function TextInput({
     <input
       ref={input}
       type="text"
-      className={classNames(styles.input, className)}
+      className={clsx(styles.input, className)}
       style={{ width }}
       name={name}
       size={size}

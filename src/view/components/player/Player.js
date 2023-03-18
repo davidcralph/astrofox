@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import shallow from 'zustand/shallow';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { player } from 'view/global';
 import useApp from 'actions/app';
 import AudioWaveform from './AudioWaveform';
@@ -31,7 +31,7 @@ export default function Player() {
   }, []);
 
   return (
-    <div className={classNames({ [styles.hidden]: !showPlayer })}>
+    <div className={clsx({ [styles.hidden]: !showPlayer })}>
       <AudioWaveform visible={hasAudio && showWaveform} />
       <div className={styles.player}>
         <PlayButtons />

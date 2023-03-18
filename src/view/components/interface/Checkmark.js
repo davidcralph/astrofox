@@ -1,10 +1,10 @@
 import React from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import styles from './Checkmark.less';
 
 const Checkmark = ({ size, className }) => (
   <div
-    className={classNames(styles.checkmark, className)}
+    className={clsx(styles.checkmark, className)}
     style={{
       width: `${size}px`,
       height: `${size}px`,

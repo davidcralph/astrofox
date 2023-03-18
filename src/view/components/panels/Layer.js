@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import TextInput from 'components/inputs/TextInput';
 import Icon from 'components/interface/Icon';
 import { Eye } from 'view/icons';
@@ -43,7 +43,7 @@ export default function Layer({
 
   return (
     <div
-      className={classNames(styles.layer, className, {
+      className={clsx(styles.layer, className, {
         [styles.edit]: edit,
         [styles.active]: active,
       })}
@@ -66,7 +66,7 @@ export default function Layer({
         )}
       </div>
       <Icon
-        className={classNames(styles.enableIcon, {
+        className={clsx(styles.enableIcon, {
           [styles.disabled]: !enabled,
         })}
         glyph={Eye}

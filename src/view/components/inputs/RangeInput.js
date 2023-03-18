@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { normalize } from 'utils/math';
 import styles from './RangeInput.less';
 
@@ -74,11 +74,11 @@ export default function RangeInput({
   }
 
   return (
-    <div className={classNames(styles.range, className)}>
+    <div className={clsx(styles.range, className)}>
       <div className={styles.track} />
       {!hideFill && <div className={styles.fill} style={getFillStyle()} />}
       <input
-        className={classNames(styles.input, {
+        className={clsx(styles.input, {
           [styles.hideThumb]: hideThumb,
           [styles.showThumbOnHover]: hideThumb && showThumbOnHover,
           [styles.smallThumb]: smallThumb,

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import Splitter from 'components/layout/Splitter';
 import styles from './Panel.less';
 
@@ -26,7 +26,7 @@ export default function Panel({
 
   return (
     <div
-      className={classNames(
+      className={clsx(
         styles.panel,
         {
           [styles.vertical]: direction === 'vertical',

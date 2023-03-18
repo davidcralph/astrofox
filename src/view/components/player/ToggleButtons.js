@@ -1,6 +1,6 @@
 import React from 'react';
 import shallow from 'zustand/shallow';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import Icon from 'components/interface/Icon';
 import useForceUpdate from 'hooks/useForceUpdate';
 import { player } from 'view/global';
@@ -39,7 +39,7 @@ export default function ToggleButtons() {
 
 const ToggleButton = ({ enabled, title, icon, onClick }) => (
   <div
-    className={classNames(styles.button, {
+    className={clsx(styles.button, {
       [styles.enabled]: enabled,
     })}
     onClick={onClick}

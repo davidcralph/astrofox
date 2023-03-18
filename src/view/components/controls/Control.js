@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import Option from 'components/controls/Option';
 import useEntity from 'hooks/useEntity';
 import { inputValueToProps } from 'utils/react';
@@ -36,7 +36,7 @@ export default function Control({ display, className, showHeader = true }) {
   }
 
   return (
-    <div className={classNames(styles.control, className)}>
+    <div className={clsx(styles.control, className)}>
       {showHeader && (
         <div className={styles.header}>
           <div className={styles.title}>

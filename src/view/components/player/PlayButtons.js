@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { player } from 'view/global';
 import Icon from 'components/interface/Icon';
 import { Pause, Play, Stop } from 'view/icons';
@@ -25,7 +25,7 @@ export default function PlayButtons() {
   return (
     <div className={styles.buttons}>
       <div
-        className={classNames(styles.button, {
+        className={clsx(styles.button, {
           [styles.playButton]: !playing,
           [styles.pauseButton]: playing,
         })}
@@ -37,7 +37,7 @@ export default function PlayButtons() {
           title={playing ? 'Pause' : 'Play'}
         />
       </div>
-      <div className={classNames(styles.button, styles.stopButton)} onClick={handleStopButtonClick}>
+      <div className={clsx(styles.button, styles.stopButton)} onClick={handleStopButtonClick}>
         <Icon className={styles.icon} glyph={Stop} title="Stop" />
       </div>
     </div>

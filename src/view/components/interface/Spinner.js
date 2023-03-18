@@ -1,10 +1,10 @@
 import React from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import styles from './Spinner.less';
 
 const Spinner = ({ size, className }) => (
   <div
-    className={classNames(styles.spinner, className)}
+    className={clsx(styles.spinner, className)}
     style={{
       width: `${size}px`,
       height: `${size}px`,

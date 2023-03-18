@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { env } from 'view/global';
 import MenuBar from 'components/nav/MenuBar';
 import Icon from 'components/interface/Icon';
@@ -15,7 +15,7 @@ export default function TitleBar() {
 
   return (
     <div
-      className={classNames(styles.titlebar, {
+      className={clsx(styles.titlebar, {
         [styles.focused]: focused,
       })}
     >

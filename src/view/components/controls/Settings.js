@@ -1,6 +1,6 @@
 import React from 'react';
 import Setting from 'components/controls/Setting';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { inputValueToProps, mapChildren } from 'utils/react';
 import styles from './Settings.less';
 
@@ -15,7 +15,7 @@ export default function Settings({ label, columns = [], className, children, onC
   }
 
   return (
-    <div className={classNames(styles.settings, className)}>
+    <div className={clsx(styles.settings, className)}>
       {label && <div className={styles.label}>{label}</div>}
       {mapChildren(
         children,

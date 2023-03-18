@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import Panel from 'components/layout/Panel';
 import { mapChildren } from 'utils/react';
 import useMeasure from 'hooks/useMeasure';
@@ -25,7 +25,7 @@ export default function PanelDock({
   return (
     <div
       ref={ref}
-      className={classNames(styles.dock, {
+      className={clsx(styles.dock, {
         [styles.vertical]: direction === 'vertical',
         [styles.horizontal]: direction !== 'vertical',
         [styles.top]: side === 'top',

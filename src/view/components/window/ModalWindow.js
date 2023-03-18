@@ -1,5 +1,5 @@
 import React, { Children, cloneElement } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import Button from 'components/interface/Button';
 import Icon from 'components/interface/Icon';
 import { Times } from 'view/icons';
@@ -14,7 +14,7 @@ export default function ModalWindow({
   children,
 }) {
   return (
-    <div className={classNames(styles.modal, className)}>
+    <div className={clsx(styles.modal, className)}>
       {showCloseButton && (
         <div className={styles.closeButton} onClick={onClose}>
           <Icon className={styles.closeIcon} glyph={Times} />

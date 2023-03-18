@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import CanvasMeter from 'canvas/CanvasMeter';
 import Button from 'components/interface/Button';
 import { formatTime } from 'utils/format';
@@ -47,7 +47,7 @@ export default function RenderPanel({ onClose = () => {} }) {
   });
 
   return (
-    <div className={classNames(styles.panel)}>
+    <div className={clsx(styles.panel)}>
       <div className={styles.progress}>
         <canvas ref={canvas} className={styles.progressBar} />
       </div>

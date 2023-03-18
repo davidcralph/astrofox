@@ -1,11 +1,11 @@
 import React from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import Icon from 'components/interface/Icon';
 import styles from './ButtonInput.less';
 
 const ButtonInput = ({ title, icon, text, active, disabled, onClick, className }) => (
   <div
-    className={classNames(
+    className={clsx(
       styles.button,
       {
         [styles.active]: active,

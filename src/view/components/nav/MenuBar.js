@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import MenuBarItem from './MenuBarItem';
 import styles from './MenuBar.less';
 
@@ -55,7 +55,7 @@ export default function MenuBar({ items = [], focused = true, onMenuAction = () 
   });
 
   return (
-    <div className={classNames(styles.bar, { [styles.focused]: focused })}>
+    <div className={clsx(styles.bar, { [styles.focused]: focused })}>
       {menuItems.map(
         ({ hidden, label, submenu }, index) =>
           !hidden && (

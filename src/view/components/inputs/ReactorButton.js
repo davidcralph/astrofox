@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import Icon from 'components/interface/Icon';
 import { Flash } from 'view/icons';
 import { setActiveReactorId } from 'actions/app';
@@ -25,7 +25,7 @@ export default function ReactorButton({ display, name, min = 0, max = 1, classNa
 
   return (
     <Icon
-      className={classNames(styles.icon, className, {
+      className={clsx(styles.icon, className, {
         [styles.iconActive]: reactor,
       })}
       glyph={Flash}

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useLayoutEffect, useMemo } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { player } from 'view/global';
 import CanvasAudio from 'canvas/CanvasAudio';
 import useSharedState from 'hooks/useSharedState';
@@ -117,7 +117,7 @@ export default function AudioWaveform({ visible = true }) {
 
   return (
     <div
-      className={classNames({
+      className={clsx({
         [styles.waveform]: true,
         [styles.hidden]: !visible,
       })}

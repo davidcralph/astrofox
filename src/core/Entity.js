@@ -1,6 +1,6 @@
 import { updateExistingProps, resolve } from 'utils/object';
 import { uniqueId } from 'utils/crypto';
-import cloneDeep from 'lodash/cloneDeep';
+import { klona } from 'klona/full';
 
 export default class Entity {
   static create = (Type, config) => {
@@ -51,7 +51,7 @@ export default class Entity {
       name,
       type,
       enabled,
-      properties: cloneDeep(properties),
+      properties: klona(properties),
     };
   }
 }

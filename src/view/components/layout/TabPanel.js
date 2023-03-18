@@ -1,5 +1,5 @@
 import React, { useState, Children, cloneElement } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import styles from './TabPanel.less';
 
 export function TabPanel({
@@ -24,7 +24,7 @@ export function TabPanel({
     tabs.push(
       <div
         key={index}
-        className={classNames(
+        className={clsx(
           styles.tab,
           {
             [styles.active]: index === activeIndex,
@@ -49,7 +49,7 @@ export function TabPanel({
 
   return (
     <div
-      className={classNames(
+      className={clsx(
         styles.panel,
         {
           [styles.positionLeft]: tabPosition === 'left',
@@ -61,21 +61,21 @@ export function TabPanel({
       )}
     >
       <div
-        className={classNames({
+        className={clsx({
           [styles.tabs]: true,
           [styles.horizontal]: tabPosition === 'top' || tabPosition === 'bottom',
         })}
       >
         {tabs}
       </div>
-      <div className={classNames(styles.content, contentClassName)}>{content}</div>
+      <div className={clsx(styles.content, contentClassName)}>{content}</div>
     </div>
   );
 }
 
 export const Tab = ({ visible, className, children }) => (
   <div
-    className={classNames(
+    className={clsx(
       {
         [styles.hidden]: !visible,
       },

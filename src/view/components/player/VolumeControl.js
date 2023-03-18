@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { player } from 'view/global';
 import { RangeInput } from 'components/inputs';
 import Icon from 'components/interface/Icon';
@@ -46,7 +46,7 @@ export default function VolumeControl() {
 
   return (
     <div className={styles.volume}>
-      <div className={classNames(styles.speaker, { [styles.mute]: mute })} onClick={handleClick}>
+      <div className={clsx(styles.speaker, { [styles.mute]: mute })} onClick={handleClick}>
         <Icon className={styles.icon} glyph={getIcon()} />
       </div>
       <div className={styles.slider}>

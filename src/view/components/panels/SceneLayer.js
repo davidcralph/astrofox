@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import Layer from 'components/panels/Layer';
 import { Picture, Cube, LightUp, DocumentLandscape } from 'view/icons';
 import { reverse } from 'utils/array';
@@ -43,7 +43,7 @@ export default function SceneLayer({ scene, activeElementId, onLayerClick, onLay
         onLayerClick={onLayerClick}
         onLayerUpdate={onLayerUpdate}
       />
-      <div className={classNames(styles.children)}>
+      <div className={clsx(styles.children)}>
         {effects.map(effect => renderLayer(effect))}
         {displays.map(display => renderLayer(display))}
       </div>

@@ -1,5 +1,5 @@
 import Entity from 'core/Entity';
-import cloneDeep from 'lodash/cloneDeep';
+import { klona } from 'klona/full';
 import { getDisplayName } from 'utils/controls';
 
 export default class Display extends Entity {
@@ -79,8 +79,8 @@ export default class Display extends Entity {
       type,
       enabled,
       displayName,
-      properties: cloneDeep(properties),
-      reactors: cloneDeep(reactors),
+      properties: klona(properties),
+      reactors: klona(reactors),
     };
   }
 

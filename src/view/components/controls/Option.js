@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { RangeInput, ReactorButton, ReactorInput } from 'components/inputs';
 import inputComponents from 'components/controls/inputComponents';
 import Icon from 'components/interface/Icon';
@@ -57,7 +57,7 @@ export default function Option({
 
   return (
     <div
-      className={classNames(styles.option, className, {
+      className={clsx(styles.option, className, {
         [styles.hidden]: hidden || inputs.length === 0,
       })}
     >
@@ -74,7 +74,7 @@ export default function Option({
         <div className={styles.text}>{label}</div>
         {withLink && (
           <Icon
-            className={classNames(styles.linkIcon, {
+            className={clsx(styles.linkIcon, {
               [styles.linkIconActive]: withLink && display.properties[withLink],
             })}
             glyph={Link}

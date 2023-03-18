@@ -1,4 +1,4 @@
-import cloneDeep from 'lodash/cloneDeep';
+import { klona } from 'klona/full';
 import Entity from 'core/Entity';
 import FFTParser from 'audio/FFTParser';
 import { normalize, floor, ceil } from 'utils/math';
@@ -193,7 +193,7 @@ export default class AudioReactor extends Entity {
       type,
       displayName,
       enabled,
-      properties: cloneDeep(properties),
+      properties: klona(properties),
     };
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import styles from './CheckboxInput.less';
 
 export default function CheckboxInput({
@@ -12,14 +12,14 @@ export default function CheckboxInput({
   return (
     <div className={styles.checkbox}>
       <div
-        className={classNames(styles.input, {
+        className={clsx(styles.input, {
           [styles.checked]: value,
         })}
         onClick={() => onChange(name, !value)}
       />
       {label && (
         <div
-          className={classNames(styles.label, {
+          className={clsx(styles.label, {
             [styles.left]: labelPosition === 'left',
             [styles.right]: labelPosition === 'right',
           })}

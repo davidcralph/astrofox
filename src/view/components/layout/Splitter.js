@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import Icon from 'components/interface/Icon';
 import { clamp } from 'utils/math';
 import { DotsHorizontal } from 'view/icons';
@@ -51,7 +51,7 @@ export default function Splitter({
 
   return (
     <div
-      className={classNames(styles.splitter, {
+      className={clsx(styles.splitter, {
         [styles.vertical]: type === 'vertical',
         [styles.horizontal]: type !== 'vertical',
       })}

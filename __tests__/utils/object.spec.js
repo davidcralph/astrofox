@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import { updateExistingProps } from 'utils/object';
-import cloneDeep from 'lodash/cloneDeep';
+import { klona } from 'klona/full';
 
 describe('updateExistingProps works properly', () => {
   test('oldProps !== newProps', () => {
@@ -16,7 +16,7 @@ describe('updateExistingProps works properly', () => {
   test('oldProps === newProps', () => {
     const oldProps = { speed: "100", theta: 75, acceleration: "2m/s", undefined: undefined };
     const newProps = { speed: "100", theta: 75, direction: 75, acceleration: "2m/s", undefined: undefined };
-    const oldPropsDup = cloneDeep(oldProps);
+    const oldPropsDup = klona(oldProps);
     const result = updateExistingProps(oldProps, newProps);
     expect(result).toBeFalsy();
     expect(oldProps).toStrictEqual(oldPropsDup);

@@ -1,5 +1,5 @@
 import Entity from 'core/Entity';
-import fft from 'fourier-transform';
+import fft from 'fourier-transform/asm';
 import blackman from 'window-function/blackman';
 import { FFT_SIZE } from 'view/constants';
 import { mag2db, normalize } from 'utils/math';

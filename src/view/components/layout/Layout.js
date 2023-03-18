@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import styles from './Layout.less';
 
 export default function Layout({
@@ -17,7 +17,7 @@ export default function Layout({
   return (
     <div
       {...props}
-      className={classNames(styles.container, className, {
+      className={clsx(styles.container, className, {
         [styles.row]: direction === 'row',
         [styles.column]: direction === 'column',
         [styles.grow]: grow,

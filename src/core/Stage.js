@@ -1,5 +1,5 @@
 import { Color } from 'three';
-import cloneDeep from 'lodash/cloneDeep';
+import { klona } from 'klona/full';
 import Scene from 'core/Scene';
 import Entity from 'core/Entity';
 import EntityList from 'core/EntityList';
@@ -159,7 +159,7 @@ export default class Stage extends Entity {
       id,
       name,
       type,
-      properties: cloneDeep(properties),
+      properties: klona(properties),
     };
   }
 
